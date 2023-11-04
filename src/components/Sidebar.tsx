@@ -31,7 +31,7 @@ function SmallSidebarItems({ IconOrImgUrl, title, url }: SmallSidebarItemProps){
     return (
         <a 
             href={url} 
-            className={twMerge(buttonStyles({ variant: "ghost" }), "py-4 px-1 flex flex-col items-center rounded-lg gap-1")}>
+            className={twMerge(!buttonStyles({ variant: "ghost" }), "py-4 px-1 flex flex-col items-center rounded-lg gap-1")}>
             <IconOrImgUrl className="w-6 h-6"/>
             <div className='text-sm'>{title}</div>
         </a>
@@ -68,9 +68,9 @@ function LargeSidebarItem( { IconOrImgUrl, title, url, isActive }: LargeSidebarI
         <a 
           href={url} 
           className={twMerge(
-            buttonStyles({ variant: "ghost"}),
+            !buttonStyles({ variant: "ghost"}),
             `w-full flex items-center rounded-lg gap-4 p-3 ${isActive ? 'font-bold bg-neutral-100 hover:bg-secondary': undefined}`)}>
-            
+            <IconOrImgUrl className='w-6 h-6'/>
             {typeof IconOrImgUrl === "string" ? (
                 <img src={IconOrImgUrl} className='w-6 h-6 rounded-full'/>
             ): (
@@ -79,9 +79,7 @@ function LargeSidebarItem( { IconOrImgUrl, title, url, isActive }: LargeSidebarI
             </div>
             
             )}
-            <IconOrImgUrl className='w-6 h-6'/>
-
-           
+            
         </a>
     )
 }
@@ -98,9 +96,9 @@ const Sidebar = () => {
         </aside>
 
         <aside className='hidden lg:block w-56 lg:sticky absolute top-0 overflow-y-auto scrollbar-hidden pb-4 flex flex-col gap-2 px-2'>
-            <LargeSidebarSection visibleItemCount={1}  >
-                <LargeSidebarItem isActive IconOrImgUrl={Home} title="Home" url="/"  />
-                <LargeSidebarItem isActive IconOrImgUrl={Clapperboard} title="Home" url="/"  />
+            <LargeSidebarSection   >
+                <LargeSidebarItem IconOrImgUrl={Home} title="Home" url="/"  />
+                <LargeSidebarItem IconOrImgUrl={Clapperboard} title="Subscriptions" url="/"  />
             </LargeSidebarSection>
             <hr />
             <LargeSidebarSection visibleItemCount={5}>
@@ -134,20 +132,20 @@ const Sidebar = () => {
                 ))}
             </LargeSidebarSection>
             <hr />
-             <LargeSidebarSection 
+             {/* <LargeSidebarSection 
                 title='Subscriptions' 
             >
-                {/* {subscriptions.map(sub => 
+                {subscriptions.map(sub => 
                     (   
-                        // <LargeSidebarItem 
-                        //     key={sub.id}
-                        //     IconOrImgUrl={sub.imgUrl}
-                        //     title={sub.channelName}
-                        //     url={`/@${sub.id}`}
-                        // />
+                        <LargeSidebarItem 
+                            key={sub.id}
+                            IconOrImgUrl={sub.imgUrl}
+                            title={sub.channelName}
+                            url={`/@${sub.id}`}
+                        />
                     )
-                )} */}
-            </LargeSidebarSection>
+                )}
+            </LargeSidebarSection> */}
         </aside>
     </>
   )
