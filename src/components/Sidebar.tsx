@@ -137,7 +137,7 @@ const Sidebar = () => {
              <LargeSidebarSection 
                 title='Subscriptions' 
             >
-                {subscriptions.map(sub => 
+                {/* {subscriptions.map(sub => 
                     (   
                         // <LargeSidebarItem 
                         //     key={sub.id}
@@ -146,7 +146,7 @@ const Sidebar = () => {
                         //     url={`/@${sub.id}`}
                         // />
                     )
-                )}
+                )} */}
             </LargeSidebarSection>
         </aside>
     </>
