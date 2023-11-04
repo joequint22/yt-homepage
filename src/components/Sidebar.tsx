@@ -3,7 +3,7 @@ import * as React from 'react'
 import { ElementType, ReactNode, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import Button, { buttonStyles } from './Button'
-import {  subscriptions, playlists } from '../data/Data'
+import { playlists } from '../data/Data'
 
 
 
@@ -31,7 +31,7 @@ function SmallSidebarItems({ IconOrImgUrl, title, url }: SmallSidebarItemProps){
     return (
         <a 
             href={url} 
-            className={twMerge(!buttonStyles({ variant: "ghost" }), "py-4 px-1 flex flex-col items-center rounded-lg gap-1")}>
+            className={twMerge(buttonStyles({ variant: "ghost" }), "py-4 px-1 flex flex-col items-center rounded-lg gap-1")}>
             <IconOrImgUrl className="w-6 h-6"/>
             <div className='text-sm'>{title}</div>
         </a>
@@ -68,7 +68,7 @@ function LargeSidebarItem( { IconOrImgUrl, title, url, isActive }: LargeSidebarI
         <a 
           href={url} 
           className={twMerge(
-            !buttonStyles({ variant: "ghost"}),
+            buttonStyles({ variant: "ghost"}),
             `w-full flex items-center rounded-lg gap-4 p-3 ${isActive ? 'font-bold bg-neutral-100 hover:bg-secondary': undefined}`)}>
             <IconOrImgUrl className='w-6 h-6'/>
             {typeof IconOrImgUrl === "string" ? (

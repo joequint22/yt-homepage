@@ -1,7 +1,7 @@
 export const categories = [
+    'All',
     'Trending Now',
     'Recently Uploaded',
-    'All',
     'JavaScript',
     'TypeScript',
     'Tailwind CSS',
