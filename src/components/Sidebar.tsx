@@ -1,4 +1,4 @@
-import { ChevronDown, History, ChevronUp, Clapperboard, Clock, Home, Library, PlaySquare, ListVideo, Repeat } from 'lucide-react'
+import { ChevronDown, History, ChevronUp, Clapperboard, Clock, Home, Library, PlaySquare, ListVideo, Repeat, Settings, Flag, Info } from 'lucide-react'
 import * as React from 'react'
 import { ElementType, ReactNode, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -132,10 +132,20 @@ const Sidebar = () => {
                 ))}
             </LargeSidebarSection>
             <hr />
-             {/* <LargeSidebarSection 
-                title='Subscriptions' 
+             <LargeSidebarSection 
+                title='Subscriptions'
+                visibleItemCount={3} 
             >
-                {subscriptions.map(sub => 
+
+                    {playlists.map(playlist => (
+                    <LargeSidebarItem 
+                        key={playlist.id}
+                        IconOrImgUrl={ListVideo}
+                        title={playlist.name}
+                        url={`/playlist?list-${playlist.id}`}
+                    />
+                ))}
+                {/* {subscriptions.map(sub => 
                     (   
                         <LargeSidebarItem 
                             key={sub.id}
@@ -144,8 +154,95 @@ const Sidebar = () => {
                             url={`/@${sub.id}`}
                         />
                     )
-                )}
-            </LargeSidebarSection> */}
+                )} */}
+            </LargeSidebarSection>
+             <LargeSidebarSection 
+                title='Explore'
+                visibleItemCount={3} 
+            >
+
+                    {playlists.map(playlist => (
+                    <LargeSidebarItem 
+                        key={playlist.id}
+                        IconOrImgUrl={ListVideo}
+                        title={playlist.name}
+                        url={`/playlist?list-${playlist.id}`}
+                    />
+                ))}
+                {/* {subscriptions.map(sub => 
+                    (   
+                        <LargeSidebarItem 
+                            key={sub.id}
+                            IconOrImgUrl={sub.imgUrl}
+                            title={sub.channelName}
+                            url={`/@${sub.id}`}
+                        />
+                    )
+                )} */}
+            </LargeSidebarSection>
+             <LargeSidebarSection 
+                title='More from Youtube'
+                visibleItemCount={3} 
+            >
+
+                    {playlists.map(playlist => (
+                    <LargeSidebarItem 
+                        key={playlist.id}
+                        IconOrImgUrl={ListVideo}
+                        title={playlist.name}
+                        url={`/playlist?list-${playlist.id}`}
+                    />
+                ))}
+                {/* {subscriptions.map(sub => 
+                    (   
+                        <LargeSidebarItem 
+                            key={sub.id}
+                            IconOrImgUrl={sub.imgUrl}
+                            title={sub.channelName}
+                            url={`/@${sub.id}`}
+                        />
+                    )
+                )} */}
+            </LargeSidebarSection>
+             <LargeSidebarSection 
+                title='More from Youtube'
+                visibleItemCount={3} 
+            >
+
+                <LargeSidebarItem 
+                    title='Settings'
+                    IconOrImgUrl={Settings}
+                    url="/settings"
+                />
+                <LargeSidebarItem 
+                    title='Report History'
+                    IconOrImgUrl={Flag}
+                    url="/settings"
+                />
+                <LargeSidebarItem 
+                    title='Help'
+                    IconOrImgUrl={Info}
+                    url="/settings"
+                />
+                {/* {subscriptions.map(sub => 
+                    (   
+                        <LargeSidebarItem 
+                            key={sub.id}
+                            IconOrImgUrl={sub.imgUrl}
+                            title={sub.channelName}
+                            url={`/@${sub.id}`}
+                        />
+                    )
+                )} */}
+            </LargeSidebarSection>
+            <hr />
+            <LargeSidebarSection>
+                <div className='p-4 overflow-x-hidden w-52 flex flex-col gap-4 text-sm'>
+                    <div>About Press Copyright Contact us Creators Advertise Developers</div>
+                    <div>Terms Privacy Policy & SafetyHow YouTube worksTest new featuresNFL Sunday Ticket</div>
+                    <p>© 2023 Google LLC</p>
+                </div>
+            </LargeSidebarSection>
         </aside>
     </>
   )
