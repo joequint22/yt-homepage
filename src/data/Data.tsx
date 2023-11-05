@@ -27,7 +27,7 @@ export const videos = [
       id: "1",
       title: "CSS Anchor Is The Best New CSS Feature Since Flexbox",
       channel: {
-        name: "Web Dev Simplified",
+        name: "developedByJoe",
         id: "WebDevSimplified",
         profileUrl:
         "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
@@ -43,7 +43,7 @@ export const videos = [
       id: "2",
       title: "NEW Way To Create Variables In JavaScript",
       channel: {
-        name: "Web Dev Simplified",
+        name: "developedByJoe",
         id: "WebDevSimplified",
         profileUrl:
         "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
@@ -75,7 +75,7 @@ export const videos = [
       id: "4",
       title: "Quick guide to CSS focus states",
       channel: {
-        name: "Kevin Powell",
+        name: "developedByJoe",
         id: "KevinPowell",
         profileUrl:
         "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
