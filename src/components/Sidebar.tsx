@@ -1,6 +1,6 @@
 import { ChevronDown, History, ChevronUp, Clapperboard, Clock, Home, Library, PlaySquare, ListVideo, Repeat, Settings, Flag, Info } from 'lucide-react'
 import * as React from 'react'
-import { ElementType, ReactNode, useEffect, useState } from 'react'
+import { ElementType, ReactNode, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import Button, { buttonStyles } from './Button'
 import { subscriptions, playlists } from '../data/Data'
