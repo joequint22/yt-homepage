@@ -14,7 +14,7 @@ function App() {
 
   return (
   <>
-    <div className='max-h-screen flex flex-col'>
+    <div className='md:max-h-screen flex flex-col'>
       <PageHeader />
       <div className="grid grid-cols-[auto,1fr] flex-grow overflow-auto">
 
