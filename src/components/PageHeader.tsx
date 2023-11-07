@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '../assets/yt-logo.png'
-import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from "lucide-react"
+import { ArrowLeft, Bell, Cast, Menu, Mic, Search, Upload, User } from "lucide-react"
 import Button from './Button'
 
 
@@ -35,22 +35,25 @@ const PageHeader = () => {
             <Mic />
           </Button>
         </form>
-        <div className={`${ showFullWidthSearch ? 'hidden': 'flex'} flex-shrink-0 gap-2 md:gap-2`}>
-          <Button onClick={ () => setShowFullWidthSearch(true)} size="icon" className="md:hidden" variant="ghost">
-            <Search />
-          </Button>
+        
+        
+        <div className={`${ showFullWidthSearch ? 'hidden': 'flex'} gap-2 md:gap-2`}>
+         
           <Button type='button' size="icon" className="md:hidden" variant="ghost">
-            <Mic />
+            <Cast />
           </Button>
-          <Button size="icon" variant="ghost">
+          <Button className="hidden md:block" size="icon" variant="ghost">
             <Upload />
           </Button>
           <Button size="icon" variant="ghost">
             <Bell />
           </Button>
-          <Button size="icon" variant="ghost">
+          <Button className="hidden md:block" size="icon" variant="ghost">
             <User />
           </Button>
+          <Button onClick={ () => setShowFullWidthSearch(true)} size="icon" className=" md:hidden" variant="ghost">
+            <Search />
+         </Button>
         </div>
     </div>
   )

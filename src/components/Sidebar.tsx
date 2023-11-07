@@ -104,7 +104,7 @@ const Sidebar = () => {
 
   return (
     <>
-        <aside className=' sticky top-0 overflow-y-auto  scrollbar-hidden pb-4 flex flex-col ml-1  lg:hidden'>
+        <aside className=' hidden md:block sticky top-0 overflow-y-auto  scrollbar-hidden pb-4 flex flex-col ml-1  lg:hidden'>
             <SmallSidebarItems IconOrImgUrl={Home} title="Home" url="/" />
             <SmallSidebarItems IconOrImgUrl={Repeat} title="Shorts" url="/" />
             <SmallSidebarItems IconOrImgUrl={Clapperboard} title="Subscriptions" url="/" />

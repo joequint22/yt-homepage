@@ -16,11 +16,11 @@ function App() {
   <>
     <div className='md:max-h-screen flex flex-col'>
       <PageHeader />
-      <div className="grid grid-cols-[auto,1fr] flex-grow overflow-auto">
+      <div className="grid md:grid-cols-[auto,1fr]  flex-grow overflow-auto">
 
         <Sidebar />
 
-        <div className='overflow-x-hidden px-8 pb-4'>
+        <div className='overflow-x-hidden md:px-8 pb-4'>
           <div className='sticky top-0 bg-white z-10 pb-4'>
             <CategoryPills selectedCategory={selectedCategory}onSelect={setSelectedCategory} categories={categories} />
           </div> 
