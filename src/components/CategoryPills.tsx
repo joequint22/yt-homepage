@@ -40,7 +40,7 @@ const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillP
   return (
     <div 
         ref={containerRef}
-        className='overflow-auto relative'>
+        className='mx-10 md:ml-2 overflow-auto relative'>
         <div 
         style={{ transform: `translateX(-${translate}px)`}}
         className=' flex whitespace-nowrap gap-3 mb-3 transition-transform w-[max-content]'>

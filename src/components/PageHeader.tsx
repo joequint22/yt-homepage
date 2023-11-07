@@ -86,16 +86,16 @@ const PageHeader = () => {
 export default PageHeader;
 
 type PageHeaderFirstSectionProps = {
-  hidden: boolean
+  hidden?: boolean
 }
 
-export function PageHeaderFirstSection({ hidden }: PageHeaderFirstSectionProps) {
+export function PageHeaderFirstSection({ hidden = false }: PageHeaderFirstSectionProps) {
   const { toggle } = useSidebarContext();
 
   return (
     <>
       <div
-        className={`${
+        className={` ${
           hidden ? "hidden" : "flex"
         } gap-0 md:gap-4 md:flex-shrink-0 items-center`}
       >

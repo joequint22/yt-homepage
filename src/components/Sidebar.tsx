@@ -5,6 +5,7 @@ import { twMerge } from 'tailwind-merge'
 import Button, { buttonStyles } from './Button'
 import { subscriptions, playlists } from '../data/Data'
 import { useSidebarContext } from '../context/SidebarContext'
+import { PageHeaderFirstSection } from './PageHeader'
 
 
 
@@ -102,7 +103,7 @@ function LargeSidebarItem( { IconOrImgUrl, title, url, isActive }: LargeSidebarI
 //     }
 // }
 const Sidebar = () => {
-    const { isLargeOpen, isSmallOpen } = useSidebarContext()
+    const { isLargeOpen, isSmallOpen, close } = useSidebarContext()
 
   return (
     <>
@@ -112,8 +113,14 @@ const Sidebar = () => {
             <SmallSidebarItems IconOrImgUrl={Clapperboard} title="Subscriptions" url="/" />
             <SmallSidebarItems IconOrImgUrl={Library} title="Library" url="/" />
         </aside>
-
-        <aside className={`w-56 lg:sticky absolute top-0 overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 hidden ${isLargeOpen ? 'lg:flex':"lg:hidden"} ${isSmallOpen ? "flex z-[999] bg-white max-h-screen" : "hidden"}`}>
+        {isSmallOpen && (
+            <div onClick={close} className="lg:hidden fixed inset-0 z-[999] bg-secondary-dark opacity-50">
+            </div>
+        )}
+        <aside className={`w-56 lg:sticky absolute top-0 overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2  ${isLargeOpen ? 'lg:flex':"lg:hidden"} ${isSmallOpen ? "flex z-[999] bg-white max-h-screen" : "hidden"}`}>
+            <div className='lg:hidden pt-2 pb-4 px-2 bg-white sticky top-0'>
+                <PageHeaderFirstSection />
+            </div>
             <LargeSidebarSection   >
                 <LargeSidebarItem IconOrImgUrl={Home} title="Home" url="/"  />
                 <LargeSidebarItem IconOrImgUrl={Clapperboard} title="Subscriptions" url="/"  />
