@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useRef, useState, useEffect } from 'react'
+// import { ChevronLeft, ChevronRight } from 'lucide-react'
+// import { useRef, useState, useEffect } from 'react'
 import Button from './Button'
 
 
@@ -10,39 +10,39 @@ type CategoryPillProps = {
 }
 
 
-const TRANSLATE_AMOUNT = 200
+// const TRANSLATE_AMOUNT = 200
 
 const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillProps) => {
-    const [translate, setTranslate] = useState(0)
-    const [isLeftVisible, setIsLeftVisible] = useState(false)
-    const [isRightVisible, setIsRightVisible] = useState(false)
-    const containerRef = useRef<HTMLDivElement>(null)
+    // const [translate, setTranslate] = useState(0)
+    // const [isLeftVisible, setIsLeftVisible] = useState(false)
+    // const [isRightVisible, setIsRightVisible] = useState(false)
+    // const containerRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        if(containerRef.current == null) return
+    // useEffect(() => {
+    //     if(containerRef.current == null) return
         
       
-        const observer = new ResizeObserver(entries => {
-            const container = entries[0]?.target
-            if(container == null ) return
-            setIsLeftVisible(translate > 0)
-            setIsRightVisible(translate + container.clientWidth < container.scrollWidth)
-        })
+    //     const observer = new ResizeObserver(entries => {
+    //         const container = entries[0]?.target
+    //         if(container == null ) return
+    //         setIsLeftVisible(translate > 0)
+    //         setIsRightVisible(translate + container.clientWidth < container.scrollWidth)
+    //     })
 
-        observer.observe(containerRef.current)
+    //     observer.observe(containerRef.current)
       
-        return () => {
-            observer.disconnect();
-        }
-    }, [containerRef, translate])
+    //     return () => {
+    //         observer.disconnect();
+    //     }
+    // }, [containerRef, translate])
     
 
   return (
     <div 
-        ref={containerRef}
+        // ref={containerRef}
         className='mx-10 md:ml-2 overflow-auto relative'>
         <div 
-        style={{ transform: `translateX(-${translate}px)`}}
+        // style={{ transform: `translateX(-${translate}px)`}}
         className=' flex whitespace-nowrap gap-3 mb-3 transition-transform w-[max-content]'>
            {categories.map(category =>(
                 <Button 
