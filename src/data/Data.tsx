@@ -154,7 +154,7 @@ export const videos = [
           "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
     },
     {
-      id: "4",
+      id: "9",
       title: "Quick guide to CSS focus states",
       channel: {
         name: "Kevin Powell",
@@ -170,7 +170,7 @@ export const videos = [
         "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
-      id: "5",
+      id: "10",
       title: "I Cannot Believe React Made A Hook For This",
       channel: {
         name: "Web Dev Simplified",
@@ -186,7 +186,7 @@ export const videos = [
         "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
-      id: "6",
+      id: "11",
       title: "I Got Laid Off...",
       channel: {
         name: "Caleb Curry",
@@ -202,7 +202,7 @@ export const videos = [
         "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
-      id: "7",
+      id: "12",
       title: "Tails OS in 100 Seconds",
       channel: {
         name: "Fireship",

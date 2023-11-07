@@ -47,9 +47,9 @@ const VideoGridItem = ({
     <div 
     onMouseEnter={()=>{setIsVideoPlaying(true)}}
     onMouseLeave={()=>{setIsVideoPlaying(false)}}
-    className='flex flex-col gap-2'>
+    className='flex flex-col px-3 md:px-0 gap-2'>
 
-        <a href={videoUrl} className='relative aspect-video'>
+        <a href={videoUrl} className='relative  aspect-video'>
             <img src={thumbnailUrl} alt="" className={`block w-full h-full object-cover rounded-xl ${isVideoPlaying ? "rounded-none": "rounded-xl"} transition-[border-radius] `}/>
             <div className='absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded '>
                 {formatDuration(duration)}

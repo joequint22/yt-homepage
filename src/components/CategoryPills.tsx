@@ -40,10 +40,10 @@ const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillP
   return (
     <div 
         ref={containerRef}
-        className='overflow-x-hidden relative'>
+        className='overflow-auto relative'>
         <div 
         style={{ transform: `translateX(-${translate}px)`}}
-        className='scrollbar-hidden flex whitespace-nowrap gap-3 mb-3 transition-transform w-[max-content]'>
+        className=' flex whitespace-nowrap gap-3 mb-3 transition-transform w-[max-content]'>
            {categories.map(category =>(
                 <Button 
                     onClick={() => onSelect(category)}
@@ -58,7 +58,7 @@ const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillP
             )
             )}
        </div>
-                {isLeftVisible && (<div className='absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full'>
+                {/* {isLeftVisible && (<div className='hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full'>
                     <Button 
                     onClick={()=> {
                         setTranslate((translate) => {
@@ -75,7 +75,7 @@ const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillP
                 </div>)}
                 
         
-                {isRightVisible && (<div className='absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent w-24 h-full flex justify-end'>
+                {isRightVisible && (<div className='hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent w-24 h-full flex justify-end'>
                     <Button 
                     onClick={() => {
                         setTranslate((translate) => {
@@ -95,7 +95,7 @@ const CategoryPills = ({ categories, selectedCategory, onSelect }: CategoryPillP
                     variant="ghost" size="icon" className='h-full aspect-square w-auto p-1.5'>
                         <ChevronRight />
                     </Button>
-                </div>)}
+                </div>)} */}
          
     </div>
   )
